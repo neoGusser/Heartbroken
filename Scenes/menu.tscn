@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnygjowtlnif6"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_a0rgn"]
+[ext_resource type="Texture2D" uid="uid://ds8dpxu4kkr7e" path="res://Sprites/Untitled26_20240718175709.png" id="2_rpmxr"]
+[ext_resource type="Theme" uid="uid://bit444p3gawf3" path="res://Themes/button.tres" id="3_ml166"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nqnd1"]
+lifetime_randomness = 0.15
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(50, 1, 1)
+gravity = Vector3(29, 98, 0)
+scale_min = 2.0
+scale_max = 5.0
+color = Color(0.13729, 0.832407, 0.881226, 0.384314)
+anim_speed_min = 2.0
+anim_speed_max = 9.18
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_a0rgn")
+
+[node name="Untitled2620240718175710" type="Sprite2D" parent="."]
+position = Vector2(401, 30)
+scale = Vector2(5, 5)
+texture = ExtResource("2_rpmxr")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(208.5, -31.5)
+scale = Vector2(7, 7)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_nqnd1")
+lifetime = 5.0
+speed_scale = 7.56
+trail_enabled = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -171.0
+offset_right = 260.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_ml166")
+text = "Play"
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_ml166")
+text = "Settings"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_ml166")
+text = "Exit"
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(663, -5)
+scale = Vector2(7, 7)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_nqnd1")
+lifetime = 5.0
+speed_scale = 7.56
+trail_enabled = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
