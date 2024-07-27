@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnygjowtlnif6"]
+[gd_scene load_steps=8 format=3 uid="uid://dnygjowtlnif6"]
 
-[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_a0rgn"]
+[ext_resource type="Script" path="res://Scripts/Menu.cs" id="1_ffg6c"]
 [ext_resource type="Texture2D" uid="uid://ds8dpxu4kkr7e" path="res://Sprites/Untitled26_20240718175709.png" id="2_rpmxr"]
+[ext_resource type="FontFile" uid="uid://d0lraxp8ywrtl" path="res://Fonts/alagard.ttf" id="3_1lcog"]
 [ext_resource type="Theme" uid="uid://bit444p3gawf3" path="res://Themes/button.tres" id="3_ml166"]
+[ext_resource type="AudioStream" uid="uid://2cjh7dcys5bd" path="res://Sounds/stone-push-37412.mp3" id="4_kvtjd"]
+[ext_resource type="AudioStream" uid="uid://6yt57mq8nuif" path="res://Sounds/rain-sound-188158.mp3" id="5_4v0t7"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nqnd1"]
 lifetime_randomness = 0.15
@@ -25,15 +28,15 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_a0rgn")
+script = ExtResource("1_ffg6c")
 
 [node name="Untitled2620240718175710" type="Sprite2D" parent="."]
-position = Vector2(401, 30)
-scale = Vector2(5, 5)
+position = Vector2(279, 50)
+scale = Vector2(3, 3)
 texture = ExtResource("2_rpmxr")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(208.5, -31.5)
+position = Vector2(225, -11)
 scale = Vector2(7, 7)
 amount = 15
 process_material = SubResource("ParticleProcessMaterial_nqnd1")
@@ -48,16 +51,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -260.0
-offset_top = -171.0
-offset_right = 260.0
-offset_bottom = 171.0
+offset_left = -128.0
+offset_top = -50.5
+offset_right = 128.0
+offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_1lcog")
+theme_override_font_sizes/font_size = 32
+text = "HEARTBROKEN"
+horizontal_alignment = 1
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -75,13 +85,24 @@ theme = ExtResource("3_ml166")
 text = "Exit"
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
-position = Vector2(663, -5)
+position = Vector2(331, -7)
 scale = Vector2(7, 7)
 amount = 15
 process_material = SubResource("ParticleProcessMaterial_nqnd1")
 lifetime = 5.0
 speed_scale = 7.56
 trail_enabled = true
+
+[node name="buttonPressed" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_kvtjd")
+volume_db = -2.13
+pitch_scale = 3.04
+
+[node name="rainDrop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4v0t7")
+volume_db = -4.353
+pitch_scale = 1.09
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]

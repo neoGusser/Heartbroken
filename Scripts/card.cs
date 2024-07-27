@@ -1,15 +1,38 @@
 using Godot;
 using System;
 
-public partial class card : Node
+namespace Card;
+public class Card
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
+    private int Id;
+    private string Name;
+    private int Hp;
+    private Array SkillSet;
+    private Sprite2D Sprite { get; }
+    private bool CardIsBroken;
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+    public Card(int id, Array skillSet, Vector2 pos = new Vector2())
+    {
+        Id = id;
+
+        var characteristics = new CharacteristicsData();
+        Name = characteristics.GetInfo(id);
+        Hp = 100;
+        SkillSet = skillSet;
+
+        Sprite = new Sprite2D();
+        Sprite.Texture = (Texture2D)GD.Load("res://Sprites/card.png");
+        Sprite.Position = pos;
+    }
+
+    public void Attack(int damage, Card card)
+    {
+        card.Hp -= damage;
+    }
+
+    public void CheckIfCardIsBroken()
+    {
+        CardIsBroken = Hp <= 0;
+    }
+
 }
