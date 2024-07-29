@@ -11,7 +11,7 @@ public partial class Game : Control
         soundPlayer = GetNode<AudioStreamPlayer>("buttonPressed");
         backButton = GetNode<Button>("Back");
 
-        var backButtonHandler = new ButtonHandler(soundPlayer, "res://Scenes/menu.tscn", () => GetTree().ChangeSceneToFile("res://Scenes/menu.tscn"));
+        var backButtonHandler = new ButtonHandler(soundPlayer, () => GetTree().ChangeSceneToFile("res://Scenes/menu.tscn"));
         backButton.Pressed += backButtonHandler.HandleButtonPress;
     }
 }

@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://dnygjowtlnif6"]
 
-[ext_resource type="Script" path="res://Scripts/Menu.cs" id="1_ffg6c"]
+[ext_resource type="Script" path="res://Scripts/ScenesScripts/Menu.cs" id="1_ffg6c"]
 [ext_resource type="Texture2D" uid="uid://ds8dpxu4kkr7e" path="res://Sprites/Untitled26_20240718175709.png" id="2_rpmxr"]
-[ext_resource type="FontFile" uid="uid://d0lraxp8ywrtl" path="res://Fonts/alagard.ttf" id="3_1lcog"]
+[ext_resource type="FontFile" uid="uid://0bnidnjjlbbj" path="res://Fonts/Hardpixel-nn51.otf" id="3_33o42"]
 [ext_resource type="Theme" uid="uid://bit444p3gawf3" path="res://Themes/button.tres" id="3_ml166"]
 [ext_resource type="AudioStream" uid="uid://2cjh7dcys5bd" path="res://Sounds/stone-push-37412.mp3" id="4_kvtjd"]
 [ext_resource type="AudioStream" uid="uid://6yt57mq8nuif" path="res://Sounds/rain-sound-188158.mp3" id="5_4v0t7"]
@@ -64,25 +64,25 @@ size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_1lcog")
-theme_override_font_sizes/font_size = 32
-text = "HEARTBROKEN"
+theme_override_fonts/font = ExtResource("3_33o42")
+theme_override_font_sizes/font_size = 24
+text = "TITLE"
 horizontal_alignment = 1
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_ml166")
-text = "Play"
+text = "BUTTON_PLAY"
 
 [node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_ml166")
-text = "Settings"
+text = "BUTTON_SETTINGS"
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_ml166")
-text = "Exit"
+text = "BUTTON_EXIT"
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
 position = Vector2(331, -7)

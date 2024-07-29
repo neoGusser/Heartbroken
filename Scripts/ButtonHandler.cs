@@ -5,13 +5,11 @@ using System.Threading.Tasks;
 public class ButtonHandler
 {
     private readonly AudioStreamPlayer soundPlayer;
-    private readonly string scenePath;
     private readonly Action onButtonPressed;
 
-    public ButtonHandler(AudioStreamPlayer soundPlayer, string scenePath, Action onButtonPressed)
+    public ButtonHandler(AudioStreamPlayer soundPlayer, Action onButtonPressed)
     {
         this.soundPlayer = soundPlayer;
-        this.scenePath = scenePath;
         this.onButtonPressed = onButtonPressed;
     }
 
@@ -26,7 +24,7 @@ public class ButtonHandler
     {
         while (soundPlayer.Playing)
         {
-            await Task.Delay(200); 
+            await Task.Delay(100); 
         }
     }
 }

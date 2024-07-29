@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ba8cqtfey08e1"
+
+[deps]
+
+files=["res://Localaze/loc.en.translation", "res://Localaze/loc.ua.translation"]
+
+source_file="res://Localaze/loc.csv"
+dest_files=["res://Localaze/loc.en.translation", "res://Localaze/loc.ua.translation"]
+
+[params]
+
+compress=true
+delimiter=0

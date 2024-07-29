@@ -1,0 +1,52 @@
+[
+	{
+		"key": "BUTTON_PLAY",
+		"en": "Play",
+		"ua": "Грати"
+	},
+
+
+	{
+		"key": "BUTTON_SETTINGS",
+		"en": "Settings",
+		"ua": "Налаштування"
+	},
+
+	{
+		"key": "BUTTON_EXIT",
+		"en": "Exit",
+		"ua": "Вийти"
+	},
+
+	{
+		"key": "BUTTON_LOC",
+		"en": "Localization: EN",
+		"ua": "Локалізація: УКР"
+	},
+
+	{
+		"key": "TITLE",
+		"en": "HEARTBROKEN",
+		"ua": "СEРЦЕРОЗБИТНИЙ"
+	},
+
+
+	{
+		"key": "HEATHCLIFF",
+		"en": "Heathcliff",
+		"ua": "Гіткліф"
+	},
+
+	{
+		"key": "CATHY",
+		"en": "Cathy",
+		"ua": "Кеті"
+	},
+
+	{
+		"key": "HINDLE",
+		"en": "Hindle",
+		"ua": "Гіндлі"
+	}
+
+]

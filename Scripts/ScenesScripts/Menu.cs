@@ -14,9 +14,9 @@ public partial class Menu : Control
         settingsButton = GetNode<Button>("MarginContainer/VBoxContainer/Settings");
         exitButton = GetNode<Button>("MarginContainer/VBoxContainer/Exit");
 
-        var playButtonHandler = new ButtonHandler(soundPlayer, "res://Scenes/game.tscn", () => GetTree().ChangeSceneToFile("res://Scenes/game.tscn"));
-        var settingsButtonHandler = new ButtonHandler(soundPlayer, "res://Scenes/settings.tscn", () => GetTree().ChangeSceneToFile("res://Scenes/settings.tscn"));
-        var exitButtonHandler = new ButtonHandler(soundPlayer, null, () => GetTree().Quit());
+        var playButtonHandler = new ButtonHandler(soundPlayer, () => GetTree().ChangeSceneToFile("res://Scenes/game.tscn"));
+        var settingsButtonHandler = new ButtonHandler(soundPlayer, () => GetTree().ChangeSceneToFile("res://Scenes/settings.tscn"));
+        var exitButtonHandler = new ButtonHandler(soundPlayer, () => GetTree().Quit());
 
         playButton.Pressed += playButtonHandler.HandleButtonPress;
         settingsButton.Pressed += settingsButtonHandler.HandleButtonPress;

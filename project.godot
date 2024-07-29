@@ -26,6 +26,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Heartbroken"
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://Localaze/loc.en.translation", "res://Localaze/loc.ua.translation")
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

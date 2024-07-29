@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://bit444p3gawf3"]
 
-[ext_resource type="FontFile" uid="uid://d0lraxp8ywrtl" path="res://Fonts/alagard.ttf" id="1_mp6sk"]
+[ext_resource type="FontFile" uid="uid://0bnidnjjlbbj" path="res://Fonts/Hardpixel-nn51.otf" id="1_i3ysp"]
 [ext_resource type="Texture2D" uid="uid://cd82lm11iv1ov" path="res://Sprites/Untitled31_20240725215208.png" id="2_wvqyu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_klb4c"]
@@ -61,8 +61,8 @@ Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
 Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
-Button/font_sizes/font_size = 16
-Button/fonts/font = ExtResource("1_mp6sk")
+Button/font_sizes/font_size = 13
+Button/fonts/font = ExtResource("1_i3ysp")
 Button/styles/disabled = SubResource("StyleBoxFlat_klb4c")
 Button/styles/focus = SubResource("StyleBoxFlat_4lw8f")
 Button/styles/hover = SubResource("StyleBoxTexture_84dvn")
