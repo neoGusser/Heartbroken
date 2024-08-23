@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://46s0q5qwt4a7"]
 
-[ext_resource type="Theme" uid="uid://bit444p3gawf3" path="res://Themes/button.tres" id="1_gjkh0"]
+[ext_resource type="Theme" uid="uid://bit444p3gawf3" path="res://Stuff/Themes/button.tres" id="1_gjkh0"]
 [ext_resource type="Script" path="res://Scripts/ScenesScripts/Settings.cs" id="1_yipi0"]
-[ext_resource type="Theme" uid="uid://b4heviq6pd880" path="res://Themes/buttonIcon.tres" id="2_0ycsf"]
+[ext_resource type="Theme" uid="uid://b4heviq6pd880" path="res://Stuff/Themes/buttonIcon.tres" id="2_0ycsf"]
 [ext_resource type="Texture2D" uid="uid://dqg0p8up7gf1p" path="res://Sprites/Untitled31_20240728202551.png" id="3_2mkdi"]
-[ext_resource type="AudioStream" uid="uid://2cjh7dcys5bd" path="res://Sounds/stone-push-37412.mp3" id="5_a0gfe"]
+[ext_resource type="AudioStream" uid="uid://2cjh7dcys5bd" path="res://Stuff/Sounds/stone-push-37412.mp3" id="5_a0gfe"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3

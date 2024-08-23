@@ -1,0 +1,14 @@
+Node
+VBoxContainer
+HBoxContainer
+Label
+CollisionShape2D
+Area2D
+ColorRect
+Button
+AudioStreamPlayer
+Sprite2D
+Panel
+Container
+Control
+GridContainer

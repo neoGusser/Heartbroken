@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdb0qx1ywyqoa"]
+
+[ext_resource type="Texture2D" uid="uid://ca8fysafj2nnb" path="res://Sprites/card.png" id="1_7gheh"]
+[ext_resource type="FontFile" uid="uid://ynvy7xsiq0fx" path="res://Stuff/Fonts/rainyhearts.ttf" id="2_pxfn7"]
+[ext_resource type="Script" path="res://Scripts/NodeScripts/CardState.cs" id="3_fcirm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umspj"]
+size = Vector2(37, 57)
+
+[node name="UICard" type="Control"]
+custom_minimum_size = Vector2(37, 57)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 37.0
+offset_bottom = 57.0
+
+[node name="Card" type="Sprite2D" parent="."]
+position = Vector2(18, 28)
+texture = ExtResource("1_7gheh")
+
+[node name="DragBox" type="Area2D" parent="."]
+
+[node name="CardColide" type="CollisionShape2D" parent="DragBox"]
+position = Vector2(18.5, 28.5)
+shape = SubResource("RectangleShape2D_umspj")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 0
+offset_right = 37.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("2_pxfn7")
+text = "name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ATK" type="Label" parent="."]
+offset_top = 29.0
+offset_right = 19.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("2_pxfn7")
+text = "ATK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HP" type="Label" parent="."]
+offset_top = 42.0
+offset_right = 18.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("2_pxfn7")
+text = "HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="State" type="Label" parent="."]
+offset_top = 16.0
+offset_right = 18.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("2_pxfn7")
+text = "State"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardSM" type="Node" parent="."]
+script = ExtResource("3_fcirm")
+
+[node name="Init" type="Node" parent="CardSM"]
+
+[node name="Idle" type="Node" parent="CardSM"]
+
+[node name="Drag" type="Node" parent="CardSM"]

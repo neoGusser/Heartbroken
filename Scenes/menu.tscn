@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/ScenesScripts/Menu.cs" id="1_ffg6c"]
 [ext_resource type="Texture2D" uid="uid://ds8dpxu4kkr7e" path="res://Sprites/Untitled26_20240718175709.png" id="2_rpmxr"]
-[ext_resource type="FontFile" uid="uid://0bnidnjjlbbj" path="res://Fonts/Hardpixel-nn51.otf" id="3_33o42"]
-[ext_resource type="Theme" uid="uid://bit444p3gawf3" path="res://Themes/button.tres" id="3_ml166"]
-[ext_resource type="AudioStream" uid="uid://2cjh7dcys5bd" path="res://Sounds/stone-push-37412.mp3" id="4_kvtjd"]
-[ext_resource type="AudioStream" uid="uid://6yt57mq8nuif" path="res://Sounds/rain-sound-188158.mp3" id="5_4v0t7"]
+[ext_resource type="FontFile" uid="uid://0bnidnjjlbbj" path="res://Stuff/Fonts/Hardpixel-nn51.otf" id="3_33o42"]
+[ext_resource type="Theme" uid="uid://bit444p3gawf3" path="res://Stuff/Themes/button.tres" id="3_ml166"]
+[ext_resource type="AudioStream" uid="uid://2cjh7dcys5bd" path="res://Stuff/Sounds/stone-push-37412.mp3" id="4_kvtjd"]
+[ext_resource type="AudioStream" uid="uid://6yt57mq8nuif" path="res://Stuff/Sounds/rain-sound-188158.mp3" id="5_4v0t7"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nqnd1"]
 lifetime_randomness = 0.15
@@ -31,7 +31,7 @@ size_flags_vertical = 3
 script = ExtResource("1_ffg6c")
 
 [node name="Untitled2620240718175710" type="Sprite2D" parent="."]
-position = Vector2(279, 50)
+position = Vector2(282, 81)
 scale = Vector2(3, 3)
 texture = ExtResource("2_rpmxr")
 
@@ -103,6 +103,20 @@ stream = ExtResource("5_4v0t7")
 volume_db = -4.353
 pitch_scale = 1.09
 autoplay = true
+
+[node name="version" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -101.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_33o42")
+text = "PreAlpha 0.4"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
