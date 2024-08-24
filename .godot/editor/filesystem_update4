@@ -1,3 +1,17 @@
 res://Scenes/menu.tscn
 res://Stuff/Themes/button.tres
 res://Stuff/Themes/buttonIcon.tres
+res://Scenes/game.tscn
+res://Scenes/settings.tscn
+res://Nodes/ui_card.tscn
+res://Scripts/NodeScripts/CardState.cs
+res://Scripts/ScenesScripts/Settings.cs
+res://Scripts/ScenesScripts/Game.cs
+res://Scripts/ScenesScripts/Menu.cs
+res://Scripts/NodeScripts/GamePlayerDesk.cs
+res://Scripts/NodeScripts/GameEnemyDesk.cs
+res://Scripts/NodeScripts/CardSM/CardInit.cs
+res://Scripts/NodeScripts/CardSM/CardDrag.cs
+res://Scripts/NodeScripts/CardSM/CardState.cs
+res://Localaze/loc.json
+res://Localaze/loc.en.translation

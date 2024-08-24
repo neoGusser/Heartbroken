@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdb0qx1ywyqoa"]
+[gd_scene load_steps=6 format=3 uid="uid://cdb0qx1ywyqoa"]
 
 [ext_resource type="Texture2D" uid="uid://ca8fysafj2nnb" path="res://Sprites/card.png" id="1_7gheh"]
-[ext_resource type="FontFile" uid="uid://ynvy7xsiq0fx" path="res://Stuff/Fonts/rainyhearts.ttf" id="2_pxfn7"]
-[ext_resource type="Script" path="res://Scripts/NodeScripts/CardState.cs" id="3_fcirm"]
+[ext_resource type="FontFile" uid="uid://0bnidnjjlbbj" path="res://Stuff/Fonts/Hardpixel-nn51.otf" id="2_hqnla"]
+[ext_resource type="Script" path="res://Scripts/NodeScripts/CardSM/CardState.cs" id="3_8rbyr"]
+[ext_resource type="Script" path="res://Scripts/NodeScripts/CardSM/CardInit.cs" id="4_re76o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umspj"]
 size = Vector2(37, 57)
@@ -26,44 +27,55 @@ shape = SubResource("RectangleShape2D_umspj")
 
 [node name="Name" type="Label" parent="."]
 layout_mode = 0
-offset_right = 37.0
-offset_bottom = 15.0
-theme_override_fonts/font = ExtResource("2_pxfn7")
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 17.0
+scale = Vector2(0.391731, 0.380015)
+theme_override_fonts/font = ExtResource("2_hqnla")
 text = "name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ATK" type="Label" parent="."]
-offset_top = 29.0
-offset_right = 19.0
-offset_bottom = 44.0
-theme_override_fonts/font = ExtResource("2_pxfn7")
+layout_mode = 0
+offset_left = 22.0
+offset_top = 34.0
+offset_right = 51.0
+offset_bottom = 54.0
+scale = Vector2(0.35, 0.35)
+theme_override_fonts/font = ExtResource("2_hqnla")
 text = "ATK"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HP" type="Label" parent="."]
-offset_top = 42.0
-offset_right = 18.0
-offset_bottom = 57.0
-theme_override_fonts/font = ExtResource("2_pxfn7")
+layout_mode = 0
+offset_left = 6.0
+offset_top = 34.0
+offset_right = 25.0
+offset_bottom = 54.0
+scale = Vector2(0.35, 0.35)
+theme_override_fonts/font = ExtResource("2_hqnla")
 text = "HP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="State" type="Label" parent="."]
-offset_top = 16.0
-offset_right = 18.0
-offset_bottom = 31.0
-theme_override_fonts/font = ExtResource("2_pxfn7")
+layout_mode = 0
+offset_top = 42.0
+offset_right = 42.0
+offset_bottom = 62.0
+scale = Vector2(0.879037, 0.813984)
+theme_override_fonts/font = ExtResource("2_hqnla")
 text = "State"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CardSM" type="Node" parent="."]
-script = ExtResource("3_fcirm")
+script = ExtResource("3_8rbyr")
 
 [node name="Init" type="Node" parent="CardSM"]
+script = ExtResource("4_re76o")
 
 [node name="Idle" type="Node" parent="CardSM"]
 

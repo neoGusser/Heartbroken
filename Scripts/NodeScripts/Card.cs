@@ -7,6 +7,7 @@ public class Card
     public int Id;
     public string Name{get;}
     public int Hp;
+    public int Atk;
     public Array SkillSet;
 
     public Card(int id)
@@ -14,11 +15,12 @@ public class Card
         var characteristics = new CharacteristicsData();
         Name = characteristics.GetInfo(id);
         Hp = 100;
+        Atk = 19;
     }
 
-    public void Attack(int damage, Card card)
+    public void Attack(Card card)
     {
-        card.Hp -= damage;
+        card.Hp -= Atk;
     }
 
 }

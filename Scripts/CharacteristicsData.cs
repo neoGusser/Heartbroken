@@ -6,9 +6,9 @@ public class CharacteristicsData
 {
     private Dictionary<int, string> db = new Dictionary<int, string>
     {
-        { 1, "Heathcliff" },
-        { 2, "Catherine" },
-        { 3, "Hindley" }
+        { 1, "HEATHCLIFF" },
+        { 2, "CATHY" },
+        { 3, "HINDLEY" }
     };
 
     public string GetInfo(int key)

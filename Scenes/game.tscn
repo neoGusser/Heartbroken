@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://byhlvdwj4xcw7"]
+[gd_scene load_steps=7 format=3 uid="uid://byhlvdwj4xcw7"]
 
 [ext_resource type="Script" path="res://Scripts/ScenesScripts/Game.cs" id="1_h4qla"]
 [ext_resource type="AudioStream" uid="uid://2cjh7dcys5bd" path="res://Stuff/Sounds/stone-push-37412.mp3" id="2_7p2l1"]
 [ext_resource type="Theme" uid="uid://b4heviq6pd880" path="res://Stuff/Themes/buttonIcon.tres" id="3_171j7"]
 [ext_resource type="Texture2D" uid="uid://dqg0p8up7gf1p" path="res://Sprites/Untitled31_20240728202551.png" id="4_vfk5y"]
+[ext_resource type="Script" path="res://Scripts/NodeScripts/GameEnemyDesk.cs" id="5_0x5j3"]
 [ext_resource type="Script" path="res://Scripts/NodeScripts/GamePlayerDesk.cs" id="5_qj25t"]
 
 [node name="Node2D" type="Node2D"]
@@ -49,14 +50,15 @@ offset_top = 4.0
 offset_right = 442.0
 offset_bottom = 201.0
 
-[node name="EnemyCards" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-
 [node name="PlayerCards" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 script = ExtResource("5_qj25t")
+
+[node name="EnemyCards" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+script = ExtResource("5_0x5j3")
 
 [connection signal="pressed" from="Control/Back" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
